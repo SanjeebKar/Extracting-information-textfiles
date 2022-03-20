@@ -8,7 +8,8 @@
 #solution
 
 1. tar -xvf log.tar.gz  //this create auth.log file
-2. less auth.log    // to check unauthorized connection attempts
+2. less auth.log    // to check unauthorized connection attempts                                                                                                      
    cat auth.log | grep "input userauth request" //will give output which contains userauth request
+   
 3. cat auth.log | grep "input userauth request" | awk'{print $9}'
 4. cat auth.log | grep "input userauth request" | awk'{print $9}'| sort -u > users.txt
